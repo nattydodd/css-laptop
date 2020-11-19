@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --silver-light: #E0E0E0;
+  --silver-medium: #C4C4C4;
+  --silver-dark: #B7B7B7;
+  --grey-light: #838383;
+  --grey-medium: #737373;
+  --grey-medium-dark: #5C5B5B;
+  --grey-dark: #3F3F3F;
+  --charcoal: #202020;
+
+  --spacing-xs: 5px;
+  --spacing-s: 10px;
+  --spacing-m: 15px;
+  --spacing-l: 20px;
+
+  --radius-s: 5px;
+  --radius-l: 10px;
+
+  --ide-top-height: 12px;
+}
+
+.laptop {
+  height: 400px;
+  width: 400px;
+  padding: var(--spacing-l);
+}
+
+.laptop__screen {
+  background: var(--silver-light);
+  border-radius: var(--radius-s);
+  margin: 0 var(--spacing-l);
+  height: 55%;
+  padding: var(--spacing-xs);
+}
+
+.laptop__screen__inner {
+  background: var(--charcoal);
+  border-radius: var(--radius-l);
+  height: 100%;
+  padding: var(--spacing-s);
+}
+
+.laptop__screen__inner__ide {
+  background: var(--grey-dark);
+  height: 100%;
+  border-radius: var(--radius-l);
+  position: relative;
+}
+
+.laptop__screen__inner__ide__top {
+  border-radius: var(--radius-s) var(--radius-s) 0 0;
+  height: var(--ide-top-height);
+  background: var(--grey-light);
+}
+
+.laptop__screen__inner__ide__top__dots {
+  background:
+    radial-gradient(5px 5px at 5px 6px, red 30%, transparent 50%),
+    radial-gradient(5px 5px at 11px 6px, gold 30%, transparent 50%),
+    radial-gradient(5px 5px at 17px 6px, #00da00 30%, transparent 50%);
+  background-repeat: no-repeat;
+  width: var(--spacing-l);
+  height: var(--spacing-l);
+}
+
+.laptop__screen__inner__ide__left {
+  background: var(--grey-medium);
+  border-radius: 0 0 0 var(--radius-s);
+  width: var(--spacing-m);
+  height: calc(100% - var(--ide-top-height));
+  display: inline-block;
+}
+
+.laptop__screen__inner__ide__panel {
+  background: var(--grey-medium-dark);
+  width: 20%;
+  height: calc(100% - var(--ide-top-height));
+  display: inline-block;
+  left: calc(var(--spacing-xs) * -1);
+  position: relative;
+}
+
+/*
+linear-gradient(to right, white 10%, transparent 10%),
+linear-gradient(to left, #eeeeee 30%, white 5px, white 35px, white 90px, transparent 10%),
+linear-gradient(to bottom, transparent 8px, transparent 15px, #775263 10px, #775263 20px, transparent 20px, transparent 52px, #775263 10px, #775263 57px, white 5%),
+linear-gradient(to left, #eeeeee 35px, transparent 50px, transparent 106px, #775263 5px, #775263 111px, transparent 65px, transparent 104px, transparent 95px, transparent 121px, transparent 110px, transparent 5px, transparent 135px, transparent 135px),
+linear-gradient(to bottom, white 8px, white 15px, #775263 10px, #775263 20px, transparent 20px, transparent 52px, #775263 10px, #775263 57px, transparent 5%),
+linear-gradient(to top, white 60%, transparent 60%),
+linear-gradient(to left, #eeeeee 35px, white 50px, white 90px, #775263 5px, #775263 95px, #775263 65px, #775263 106px, #f7aa40 95px, #f7aa40 121px, #f7aa40 110px, #775263 5px, #775263 135px, transparent 135px)
+*/
